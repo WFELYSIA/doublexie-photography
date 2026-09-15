@@ -401,36 +401,6 @@ button {
   color: var(--muted);
 }
 
-.section-heading-actions {
-  display: flex;
-  align-items: flex-end;
-  gap: 22px;
-}
-
-.manage-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 0 13px;
-  color: var(--muted);
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-size: 0.86rem;
-  font-weight: 600;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.manage-button:hover {
-  color: var(--text);
-  background: var(--surface);
-  border-color: rgba(255, 255, 255, 0.24);
-}
-
 .filter-bar {
   display: inline-flex;
   gap: 6px;
@@ -782,175 +752,6 @@ button {
   font-size: 0.88rem;
 }
 
-.manager {
-  position: fixed;
-  inset: 0;
-  z-index: 110;
-  display: grid;
-  place-items: center;
-  padding: 28px;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.22s ease,
-    visibility 0.22s ease;
-}
-
-.manager.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.manager-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 5, 7, 0.78);
-  backdrop-filter: blur(8px);
-}
-
-.manager-dialog {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  width: min(900px, 100%);
-  max-height: min(760px, calc(100vh - 56px));
-  overflow: auto;
-  padding: 28px;
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-}
-
-.manager-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 24px;
-}
-
-.manager-header h2 {
-  margin: 0;
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-  letter-spacing: 0;
-}
-
-.manager-close {
-  display: grid;
-  flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  place-items: center;
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  transition: background 0.2s ease;
-}
-
-.manager-close:hover {
-  background: rgba(255, 255, 255, 0.14);
-}
-
-.manager-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.manager-toolbar .button {
-  min-height: 40px;
-}
-
-.category-select {
-  min-height: 40px;
-  padding: 0 34px 0 12px;
-  color: var(--text);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.manager-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.manager-item {
-  display: grid;
-  gap: 10px;
-  padding: 10px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.manager-item img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: var(--bg);
-  border-radius: 6px;
-}
-
-.manager-item-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  min-width: 0;
-}
-
-.manager-item-info strong {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 0.88rem;
-}
-
-.manager-item-info span {
-  flex: 0 0 auto;
-  color: var(--accent);
-  font-size: 0.72rem;
-}
-
-.manager-item-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.manager-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  padding: 0 10px;
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-size: 0.78rem;
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.manager-action:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.24);
-}
-
-.manager-action-danger {
-  color: var(--accent-2);
-}
-
 .lightbox {
   position: fixed;
   inset: 0;
@@ -1119,9 +920,6 @@ button {
     gap: 14px;
   }
 
-  .section-heading-actions {
-    align-items: flex-start;
-  }
 
   .section-intro {
     max-width: 520px;
@@ -1138,9 +936,6 @@ button {
     padding: 36px 26px;
   }
 
-  .manager-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .site-nav {
     position: fixed;
@@ -1205,14 +1000,6 @@ button {
     padding: 82px 0;
   }
 
-  .section-heading-actions {
-    display: grid;
-    gap: 14px;
-  }
-
-  .manage-button {
-    justify-self: start;
-  }
 
   .hero-content {
     width: calc(100% - 32px);
@@ -1271,26 +1058,6 @@ button {
     left: 10px;
   }
 
-  .manager {
-    padding: 12px;
-  }
-
-  .manager-dialog {
-    max-height: calc(100vh - 24px);
-    padding: 20px 16px;
-  }
-
-  .manager-toolbar {
-    flex-wrap: wrap;
-  }
-
-  .manager-toolbar .button {
-    flex: 1;
-  }
-
-  .manager-grid {
-    grid-template-columns: 1fr;
-  }
 
   .lightbox {
     padding: 58px 18px 22px;

@@ -99,16 +99,7 @@
             <p class="section-kicker">Portfolio</p>
             <h2>作品集</h2>
           </div>
-          <div class="section-heading-actions">
-            <p class="section-intro">场照与合成样片</p>
-            <button class="manage-button" type="button" data-manage-photos>
-              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true">
-                <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.7" />
-                <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.88 1.88-.06-.06A1.7 1.7 0 0 0 16 18.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V20h-2.66v-.3a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.88.34l-.06.06-1.88-1.88.06-.06a1.7 1.7 0 0 0 .34-1.88 1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H5.2v-2.66h.3a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.34-1.88l-.06-.06 1.88-1.88.06.06a1.7 1.7 0 0 0 1.88.34 1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V4.8h2.66v.3a1.7 1.7 0 0 0 1.1 1.6 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.88 1.88-.06.06a1.7 1.7 0 0 0-.34 1.88 1.7 1.7 0 0 0 .6 1 1.7 1.7 0 0 0 1.1.4h.3v2.66h-.3a1.7 1.7 0 0 0-1.6 1.1Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              更换例图
-            </button>
-          </div>
+          <p class="section-intro">场照与合成样片</p>
         </div>
 
         <div class="filter-bar" role="tablist" aria-label="作品分类">
@@ -145,9 +136,9 @@
             <span class="price-tag">轻量套餐</span>
             <div class="price-value"><strong>68</strong><span>元 / 4 张</span></div>
             <ul class="price-list">
-              <li>适合单角色约拍</li>
-              <li>统一调色风格</li>
-              <li>随机掉落无偿合成</li>
+              <li>去背景杂物</li>
+              <li>基础调色</li>
+              <li>简单磨皮</li>
             </ul>
             <a class="button button-dark" href="#contact">预约套餐</a>
           </article>
@@ -156,9 +147,9 @@
             <span class="price-tag">完整套餐</span>
             <div class="price-value"><strong>148</strong><span>元 / 9 张</span></div>
             <ul class="price-list">
-              <li>多场景成片</li>
-              <li>精修风格统一</li>
-              <li>优先排期</li>
+              <li>去背景杂物</li>
+              <li>基础调色</li>
+              <li>简单磨皮</li>
             </ul>
             <a class="button button-dark" href="#contact">预约套餐</a>
           </article>
@@ -232,9 +223,14 @@
               <strong>海南</strong>
               <span class="location-hint">当前所在地</span>
             </div>
-            <a class="contact-row" href="https://wpa.qq.com/msgrd?v=3&uin=335144196&site=qq&menu=yes" target="_blank" rel="noreferrer">
-              <span class="contact-label">快速联系</span>
-              <strong>打开 QQ 对话</strong>
+            <a class="contact-row" href="https://www.xiaohongshu.com/user/profile/675d86b7000000001801ef15?xsec_token=YBsyJSre4aEoQNkkceIwiM4t1r09iQD0o7nwINqQjFpXk%3D&amp;xsec_source=app_share&amp;xhsshare=&amp;shareRedId=OD03RDs7RkA2NzUyOTgwNjc7OThJSzc-&amp;apptime=1789484267&amp;share_id=b009bdc2bd3b41dba69dc6c1caaa12f2&amp;share_channel=copy_link" target="_blank" rel="noreferrer">
+              <span class="contact-label">小红书主页</span>
+              <strong>打开主页</strong>
+              <span class="copy-hint">前往</span>
+            </a>
+            <a class="contact-row" href="https://qm.qq.com/q/e8Pf4y8IH" target="_blank" rel="noreferrer">
+              <span class="contact-label">QQ 主页</span>
+              <strong>打开主页</strong>
               <span class="copy-hint">前往</span>
             </a>
           </div>
@@ -246,40 +242,6 @@
       <span>© <span data-year></span> 谢屑摄影 · CN.谢屑</span>
       <span>漫展 / 外景 / 棚拍</span>
     </footer>
-
-    <div class="manager" data-manager aria-hidden="true">
-      <div class="manager-backdrop" data-manager-close></div>
-      <section class="manager-dialog" role="dialog" aria-modal="true" aria-labelledby="manager-title">
-        <header class="manager-header">
-          <div>
-            <p class="section-kicker">Manage Gallery</p>
-            <h2 id="manager-title">更换展示例图</h2>
-          </div>
-          <button class="manager-close" type="button" data-manager-close aria-label="关闭">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
-              <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-            </svg>
-          </button>
-        </header>
-
-        <div class="manager-toolbar">
-          <label class="button button-primary">
-            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true">
-              <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-            </svg>
-            添加样片
-            <input type="file" accept="image/*" multiple data-add-photos hidden />
-          </label>
-          <select class="category-select" data-add-category aria-label="新样片分类">
-            <option value="scene">场照</option>
-            <option value="composite">合成</option>
-          </select>
-          <button class="button button-ghost" type="button" data-reset-photos>恢复默认</button>
-        </div>
-
-        <div class="manager-grid" data-manager-grid></div>
-      </section>
-    </div>
 
     <div class="lightbox" data-lightbox aria-hidden="true">
       <button class="lightbox-close" type="button" data-lightbox-close aria-label="关闭">
