@@ -20,4 +20,9 @@ window.PHOTOS = [
   { src: "assets/photos/portrait-04.jpg", category: "scene", tag: "场照", caption: "竖版场照 04" },
   { src: "assets/photos/composite-01.jpg", category: "composite", tag: "合成", caption: "合成样片 01" },
   { src: "assets/photos/composite-02.jpg", category: "composite", tag: "合成", caption: "合成样片 02" },
+  { src: "assets/photos/scene-10.jpg", category: "scene", tag: "场照", caption: "场照样片 10" },
+  { src: "assets/photos/scene-11.jpg", category: "scene", tag: "场照", caption: "场照样片 11" },
+  { src: "assets/photos/composite-03.jpg", category: "composite", tag: "合成", caption: "阿狸合成" },
+  { src: "assets/photos/composite-04.jpg", category: "composite", tag: "合成", caption: "明日香合成" },
+  { src: "assets/photos/composite-05.jpg", category: "composite", tag: "合成", caption: "守岸人大合成" },
 ];
