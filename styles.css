@@ -76,24 +76,6 @@ button {
   border-bottom-color: var(--line);
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-.brand-mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  color: var(--bg);
-  background: var(--accent);
-  border-radius: 8px;
-}
-
 .site-nav {
   display: flex;
   align-items: center;
@@ -201,6 +183,19 @@ button {
   content: "";
   background: linear-gradient(90deg, transparent, rgba(255, 138, 61, 0.65), transparent);
   transform: translateX(-50%);
+}
+
+.hero-watermark {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: clamp(-70px, 1vw, 48px);
+  width: min(38vw, 480px);
+  height: auto;
+  opacity: 0.045;
+  transform: translateY(-50%) rotate(-7deg);
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero-content {
@@ -899,6 +894,44 @@ button {
   }
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand-lockup {
+  display: block;
+  width: auto;
+  height: 34px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-eyebrow-mark {
+  width: 22px;
+  height: auto;
+  flex: 0 0 auto;
+  opacity: 0.9;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.footer-lockup {
+  display: block;
+  width: auto;
+  height: 24px;
+  flex: 0 0 auto;
+}
 @media (max-width: 900px) {
   .hero {
     padding-top: 92px;
@@ -1105,5 +1138,34 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-watermark {
+    right: -80px;
+    width: 360px;
+    opacity: 0.035;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-lockup {
+    height: 30px;
+  }
+
+  .footer-brand {
+    flex-wrap: wrap;
+  }
+
+  .footer-lockup {
+    height: 22px;
+  }
+
+  .hero-watermark {
+    top: 32%;
+    right: -100px;
+    width: 260px;
+    opacity: 0.028;
   }
 }
