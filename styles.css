@@ -372,6 +372,7 @@ button {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
   padding: 110px 0;
+  scroll-margin-top: 84px;
 }
 
 .section-heading {
@@ -554,7 +555,7 @@ button {
 }
 
 .price-number strong {
-  font-size: 3.8rem;
+  font-size: 4.5rem;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -567,6 +568,25 @@ button {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.price-average {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin: 0;
+  padding: 5px 8px;
+  color: var(--accent);
+  background: rgba(255, 138, 61, 0.12);
+  border-radius: 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.price-average span {
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .price-list {
