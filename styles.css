@@ -509,12 +509,14 @@ button {
 
 .price-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
 .price-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 28px;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -616,6 +618,7 @@ button {
 
 .button-dark {
   width: 100%;
+  margin-top: auto;
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.16);
@@ -995,7 +998,6 @@ button {
     max-width: 520px;
   }
 
-  .price-grid,
   .notes-grid {
     grid-template-columns: 1fr;
   }
@@ -1204,5 +1206,17 @@ button {
     right: -100px;
     width: 260px;
     opacity: 0.028;
+  }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 560px) {
+  .price-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
