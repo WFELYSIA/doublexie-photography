@@ -530,6 +530,7 @@ button {
 
 .price-tag {
   display: inline-flex;
+  align-self: flex-start;
   margin-bottom: 28px;
   padding: 5px 9px;
   color: var(--accent);
