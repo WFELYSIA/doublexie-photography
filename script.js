@@ -10,11 +10,70 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const photoCount = document.querySelector("[data-photo-count]");
-
+const splash = document.querySelector("[data-splash]");
+const splashMedia = document.querySelector("[data-splash-media]");
+const splashEnter = document.querySelector("[data-splash-enter]");
+const splashPageRegions = document.querySelectorAll("header, main, footer");
+let splashColumnCount = 0;
 let activeFilter = "all";
 let currentIndex = 0;
 let visibleWorks = [...works];
 
+function buildSplashMedia() {
+  if (!splashMedia) return;
+  const nextColumnCount = window.matchMedia("(max-width: 700px)").matches ? 2 : 4;
+  if (nextColumnCount === splashColumnCount) return;
+  splashColumnCount = nextColumnCount;
+  splashMedia.innerHTML = "";
+
+  const columns = Array.from({ length: nextColumnCount }, () => {
+    const column = document.createElement("div");
+    column.className = "splash-column";
+    return column;
+  });
+
+  works.forEach((work, index) => {
+    const image = document.createElement("img");
+    image.src = work.src;
+    image.alt = "";
+    image.decoding = "async";
+    columns[index % nextColumnCount].append(image);
+  });
+
+  columns.forEach((column) => {
+    const clone = column.cloneNode(true);
+    Array.from(clone.children).forEach((child) => column.append(child));
+    splashMedia.append(column);
+  });
+}
+
+function setPageInert(isInert) {
+  splashPageRegions.forEach((region) => {
+    region.inert = isInert;
+  });
+}
+
+function enterSite() {
+  if (!splash || splash.classList.contains("is-hidden")) return;
+  splash.classList.add("is-leaving");
+  splash.setAttribute("aria-hidden", "true");
+  setPageInert(false);
+  document.body.classList.remove("splash-active");
+  window.scrollTo({ top: 0, behavior: "auto" });
+  window.setTimeout(() => splash.classList.add("is-hidden"), 650);
+}
+
+function setupSplash() {
+  buildSplashMedia();
+  if (!splash) return;
+  document.body.classList.add("splash-active");
+  setPageInert(true);
+  if (splashEnter) {
+    splashEnter.addEventListener("click", enterSite);
+    window.setTimeout(() => splashEnter.focus({ preventScroll: true }), 120);
+  }
+  window.addEventListener("resize", buildSplashMedia);
+}
 function buildGallery() {
   gallery.innerHTML = "";
   if (photoCount) photoCount.textContent = `${works.length} 张样片`;
@@ -163,4 +222,5 @@ window.addEventListener("scroll", () => {
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
+setupSplash();
 buildGallery();
