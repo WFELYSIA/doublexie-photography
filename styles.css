@@ -1221,3 +1221,239 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+body.splash-active {
+  overflow: hidden;
+}
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #070709;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.55s ease,
+    visibility 0.55s ease;
+}
+
+.splash.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash.is-leaving .splash-panel {
+  opacity: 0;
+  transform: translateY(-12px) scale(0.99);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.splash-media {
+  position: absolute;
+  inset: -18% 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+  opacity: 0.3;
+  filter: brightness(0.42) saturate(0.86);
+  transform: scale(1.03);
+}
+
+.splash-column {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  animation: splash-scroll 52s linear infinite;
+  will-change: transform;
+}
+
+.splash-column:nth-child(2n) {
+  animation-duration: 64s;
+  animation-delay: -14s;
+}
+
+.splash-column:nth-child(3n) {
+  animation-duration: 58s;
+  animation-delay: -7s;
+}
+
+.splash-column img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.splash-fade {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  height: 26vh;
+  pointer-events: none;
+}
+
+.splash-fade-top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(7, 7, 9, 0.99), rgba(7, 7, 9, 0));
+}
+
+.splash-fade-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(7, 7, 9, 0.99), rgba(7, 7, 9, 0));
+}
+
+.splash-panel {
+  position: relative;
+  z-index: 4;
+  width: min(760px, calc(100% - 40px));
+  padding: 48px 44px;
+  text-align: center;
+  background: rgba(10, 10, 13, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+  animation: splash-panel-in 0.8s ease both;
+}
+
+.splash-logo {
+  display: block;
+  width: min(420px, 78%);
+  height: auto;
+  margin: 0 auto 28px;
+}
+
+.splash-kicker {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.splash-panel h1 {
+  margin: 0;
+  font-size: 3.6rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.splash-sub {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.splash-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.splash-meta span {
+  padding: 4px 9px;
+  color: #ded7cd;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  font-size: 0.78rem;
+}
+
+.splash-enter {
+  min-width: 220px;
+  min-height: 54px;
+  margin-top: 30px;
+  padding: 0 26px;
+  color: #0c0c0f;
+  background: var(--accent);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(255, 138, 61, 0.28);
+  font-size: 1rem;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.splash-enter:hover {
+  background: #ff9b5e;
+  box-shadow: 0 18px 42px rgba(255, 138, 61, 0.38);
+  transform: translateY(-2px);
+}
+
+.splash-enter:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.88);
+  outline-offset: 4px;
+}
+
+.splash-contact {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.splash-note {
+  margin: 10px 0 0;
+  color: #7f7a74;
+  font-size: 0.76rem;
+}
+
+@keyframes splash-scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes splash-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .splash-media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .splash-panel {
+    padding: 36px 22px;
+  }
+
+  .splash-logo {
+    width: min(320px, 92%);
+    margin-bottom: 22px;
+  }
+
+  .splash-panel h1 {
+    font-size: 2.8rem;
+  }
+
+  .splash-enter {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-column {
+    animation: none;
+  }
+}
