@@ -54,13 +54,14 @@ function setPageInert(isInert) {
 }
 
 function enterSite() {
-  if (!splash || splash.classList.contains("is-hidden")) return;
+  if (!splash || splash.classList.contains("is-hidden") || splash.classList.contains("is-leaving")) return;
   splash.classList.add("is-leaving");
   splash.setAttribute("aria-hidden", "true");
   setPageInert(false);
   document.body.classList.remove("splash-active");
+  requestAnimationFrame(() => document.body.classList.add("site-ready"));
   window.scrollTo({ top: 0, behavior: "auto" });
-  window.setTimeout(() => splash.classList.add("is-hidden"), 650);
+  window.setTimeout(() => splash.classList.add("is-hidden"), 780);
 }
 
 function setupSplash() {
