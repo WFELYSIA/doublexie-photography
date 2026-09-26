@@ -81,7 +81,7 @@ button {
   align-items: center;
   gap: 30px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .site-nav a:not(.nav-cta) {
@@ -1316,7 +1316,7 @@ body.splash-active {
   bottom: 0;
   left: 0;
   z-index: 3;
-  width: min(22vw, 300px);
+  width: min(36vw, 520px);
   height: auto;
   object-fit: contain;
   object-position: left bottom;
@@ -1328,8 +1328,8 @@ body.splash-active {
 .splash-panel {
   position: relative;
   z-index: 4;
-  width: min(760px, calc(100% - 40px));
-  padding: 48px 44px;
+  width: min(560px, calc(100% - 40px));
+  padding: 32px 28px;
   text-align: center;
   background: rgba(10, 10, 13, 0.84);
   border-radius: 8px;
@@ -1338,23 +1338,16 @@ body.splash-active {
   animation: splash-panel-in 0.8s ease both;
 }
 
-.splash-logo {
-  display: block;
-  width: min(420px, 78%);
-  height: auto;
-  margin: 0 auto 28px;
-}
-
 .splash-kicker {
-  margin: 12px 0 10px;
+  margin: 10px 0 8px;
   color: var(--accent);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
 .splash-panel h1 {
   margin: 0;
-  font-size: 4.6rem;
+  font-size: 4rem;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -1362,20 +1355,20 @@ body.splash-active {
 .splash-sub {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .splash-enter {
-  min-width: 160px;
-  min-height: 44px;
-  margin-top: 24px;
-  padding: 0 20px;
+  min-width: 140px;
+  min-height: 40px;
+  margin-top: 20px;
+  padding: 0 18px;
   color: #0c0c0f;
   background: var(--accent);
   border: 0;
   border-radius: 8px;
   box-shadow: 0 10px 24px rgba(255, 138, 61, 0.26);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 700;
   transition:
     background 0.2s ease,
@@ -1395,9 +1388,9 @@ body.splash-active {
 }
 
 .splash-note {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: #7f7a74;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
 }
 
 @keyframes splash-scroll {
@@ -1426,24 +1419,19 @@ body.splash-active {
   }
 
   .splash-corner-logo {
-    width: min(42vw, 190px);
+    width: min(76vw, 340px);
   }
 
   .splash-panel {
-    padding: 36px 22px;
-  }
-
-  .splash-logo {
-    width: min(320px, 92%);
-    margin-bottom: 22px;
+    padding: 26px 20px;
   }
 
   .splash-panel h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .splash-enter {
-    min-width: 168px;
+    min-width: 140px;
   }
 }
 
