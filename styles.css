@@ -533,10 +533,13 @@ button {
 
 .original-card-copy {
   display: grid;
+  justify-items: start;
   gap: 12px;
 }
 
 .price-card-original .price-tag {
+  justify-self: start;
+  width: fit-content;
   margin-bottom: 0;
 }
 
