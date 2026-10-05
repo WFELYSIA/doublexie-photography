@@ -523,6 +523,28 @@ button {
   border-radius: 8px;
 }
 
+.price-card-original {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.original-card-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.price-card-original .price-tag {
+  margin-bottom: 0;
+}
+
+.price-card-original .button-dark {
+  width: auto;
+  min-width: 180px;
+  margin-top: 0;
+}
 .price-card-featured {
   background: var(--surface-2);
   border-color: rgba(255, 138, 61, 0.5);
@@ -1511,5 +1533,15 @@ body.site-ready .site-footer {
   body.site-ready main,
   body.site-ready .site-footer {
     animation: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .price-card-original {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card-original .button-dark {
+    width: 100%;
   }
 }
