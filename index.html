@@ -126,79 +126,87 @@
         <div class="section-heading">
           <div>
             <p class="section-kicker">Service &amp; Price</p>
-            <h2>约拍服务</h2>
+            <h2>约拍/后期套餐</h2>
           </div>
-          <p class="section-intro">简修场照，含去背景杂物、调色及简单磨皮。</p>
+          <p class="section-intro">约拍与后期分开选择，按需求切换查看。</p>
         </div>
 
-        <div class="price-grid">
-          <article class="price-card price-card-original">
-            <div class="original-card-copy">
-              <span class="price-tag">原图直返</span>
-              <div class="price-value"><span class="price-average-label">单张价格</span><div class="price-number"><strong>15</strong><span>元 / 张</span></div><p class="price-package">仅返回原图，不含后期处理</p>
-              <p class="original-format">可选 RAW / JPEG 格式</p></div>
+        <div class="pill-switch" role="tablist" aria-label="套餐分类">
+          <button class="pill-button is-active" type="button" role="tab" aria-selected="true" data-service-tab="shoot">约拍</button>
+          <button class="pill-button" type="button" role="tab" aria-selected="false" data-service-tab="post">后期</button>
+        </div>
+
+        <div class="segment-panel is-active" data-service-panel="shoot">
+          <div class="price-grid">
+            <article class="price-card price-card-original">
+              <div class="original-card-copy">
+                <span class="price-tag">原图直返</span>
+                <div class="price-value"><span class="price-average-label">单张价格</span><div class="price-number"><strong>15</strong><span>元 / 张</span></div><p class="price-package">仅返回原图，不含后期处理</p>
+                <p class="original-format">可选 RAW / JPEG 格式</p></div>
+              </div>
+              <a class="button button-dark" href="#contact">预约原图</a>
+            </article>
+
+            <article class="price-card price-card-featured">
+              <span class="price-tag">简修单张</span>
+              <div class="price-value"><span class="price-average-label">单张价格</span><div class="price-number"><strong>20</strong><span>元 / 张</span></div><p class="price-package">含基础简修</p></div>
+              <ul class="price-list">
+                <li>去背景杂物</li>
+                <li>基础调色</li>
+                <li>简单磨皮</li>
+              </ul>
+              <a class="button button-dark" href="#contact">预约单张</a>
+            </article>
+
+            <article class="price-card">
+              <span class="price-tag">轻量套餐</span>
+              <div class="price-value"><span class="price-average-label">套餐总价</span><div class="price-number"><strong>72</strong><span>元 / 4 张</span></div><p class="price-average"><span>均价</span>18 元 / 张</p></div>
+              <ul class="price-list">
+                <li>去背景杂物</li>
+                <li>基础调色</li>
+                <li>简单磨皮</li>
+              </ul>
+              <a class="button button-dark" href="#contact">预约套餐</a>
+            </article>
+
+            <article class="price-card">
+              <span class="price-tag">精选套餐</span>
+              <div class="price-value"><span class="price-average-label">套餐总价</span><div class="price-number"><strong>100</strong><span>元 / 6 张</span></div><p class="price-average"><span>均价约</span>16.7 元 / 张</p></div>
+              <ul class="price-list">
+                <li>去背景杂物</li>
+                <li>基础调色</li>
+                <li>简单磨皮</li>
+              </ul>
+              <a class="button button-dark" href="#contact">预约套餐</a>
+            </article>
+
+            <article class="price-card">
+              <span class="price-tag">完整套餐</span>
+              <div class="price-value"><span class="price-average-label">套餐总价</span><div class="price-number"><strong>148</strong><span>元 / 9 张</span></div><p class="price-average"><span>均价约</span>16.4 元 / 张</p></div>
+              <ul class="price-list">
+                <li>去背景杂物</li>
+                <li>基础调色</li>
+                <li>简单磨皮</li>
+              </ul>
+              <a class="button button-dark" href="#contact">预约套餐</a>
+            </article>
+          </div>
+
+          <div class="promo-strip">
+            <div class="promo-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="m12 3 2.2 4.7 5.1.6-3.8 3.5.9 5-4.4-2.5-4.4 2.5.9-5L4.7 8.3l5.1-.6L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
             </div>
-            <a class="button button-dark" href="#contact">预约原图</a>
-          </article>
-
-          <article class="price-card price-card-featured">
-            <span class="price-tag">简修单张</span>
-            <div class="price-value"><span class="price-average-label">单张价格</span><div class="price-number"><strong>20</strong><span>元 / 张</span></div><p class="price-package">含基础简修</p></div>
-            <ul class="price-list">
-              <li>去背景杂物</li>
-              <li>基础调色</li>
-              <li>简单磨皮</li>
-            </ul>
-            <a class="button button-dark" href="#contact">预约单张</a>
-          </article>
-
-          <article class="price-card">
-            <span class="price-tag">轻量套餐</span>
-            <div class="price-value"><span class="price-average-label">套餐总价</span><div class="price-number"><strong>72</strong><span>元 / 4 张</span></div><p class="price-average"><span>均价</span>18 元 / 张</p></div>
-            <ul class="price-list">
-              <li>去背景杂物</li>
-              <li>基础调色</li>
-              <li>简单磨皮</li>
-            </ul>
-            <a class="button button-dark" href="#contact">预约套餐</a>
-          </article>
-
-          <article class="price-card">
-            <span class="price-tag">精选套餐</span>
-            <div class="price-value"><span class="price-average-label">套餐总价</span><div class="price-number"><strong>100</strong><span>元 / 6 张</span></div><p class="price-average"><span>均价约</span>16.7 元 / 张</p></div>
-            <ul class="price-list">
-              <li>去背景杂物</li>
-              <li>基础调色</li>
-              <li>简单磨皮</li>
-            </ul>
-            <a class="button button-dark" href="#contact">预约套餐</a>
-          </article>
-
-          <article class="price-card">
-            <span class="price-tag">完整套餐</span>
-            <div class="price-value"><span class="price-average-label">套餐总价</span><div class="price-number"><strong>148</strong><span>元 / 9 张</span></div><p class="price-average"><span>均价约</span>16.4 元 / 张</p></div>
-            <ul class="price-list">
-              <li>去背景杂物</li>
-              <li>基础调色</li>
-              <li>简单磨皮</li>
-            </ul>
-            <a class="button button-dark" href="#contact">预约套餐</a>
-          </article>
-        </div>
-
-        <div class="promo-strip">
-          <div class="promo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-              <path d="m12 3 2.2 4.7 5.1.6-3.8 3.5.9 5-4.4-2.5-4.4 2.5.9-5L4.7 8.3l5.1-.6L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-            </svg>
+            <p><strong>角色优惠：</strong>原、崩、舟、终末地角色八折；爱莉一折。定金 25%，随机掉落无偿合成。</p>
           </div>
-          <p><strong>角色优惠：</strong>原、崩、舟、终末地角色八折；爱莉一折。定金 25%，随机掉落无偿合成。</p>
         </div>
-              <div class="retouch-section">
+
+        <div class="segment-panel" data-service-panel="post" hidden>
           <div class="retouch-heading">
             <div>
               <p class="section-kicker">Post-production</p>
-              <h3>后期</h3>
+              <h3>后期价格</h3>
             </div>
             <p>价格根据人物复杂程度小幅波动。</p>
           </div>
@@ -223,12 +231,17 @@
         <div class="section-heading">
           <div>
             <p class="section-kicker">Before Booking</p>
-            <h2>约拍须知</h2>
+            <h2>约拍/后期须知</h2>
           </div>
           <p class="section-intro">为了让成片更接近期待，请先阅读以下说明。</p>
         </div>
 
-        <div class="notes-categories">
+        <div class="pill-switch" role="tablist" aria-label="须知分类">
+          <button class="pill-button is-active" type="button" role="tab" aria-selected="true" data-notes-tab="shoot">关于拍摄</button>
+          <button class="pill-button" type="button" role="tab" aria-selected="false" data-notes-tab="post">关于后期</button>
+        </div>
+
+        <div class="segment-panel notes-panel is-active" data-notes-panel="shoot">
           <article class="notes-category">
             <div class="notes-category-head"><span class="note-index">01</span><h3>关于拍摄</h3></div>
             <ol class="notes-list">
@@ -241,6 +254,9 @@
               <li><span>07</span><div><strong>确认付款</strong><p>返图先看效果，再结尾款。</p></div></li>
             </ol>
           </article>
+        </div>
+
+        <div class="segment-panel notes-panel" data-notes-panel="post" hidden>
           <article class="notes-category">
             <div class="notes-category-head"><span class="note-index">02</span><h3>关于后期</h3></div>
             <ol class="notes-list">
