@@ -25,4 +25,7 @@ window.PHOTOS = [
   { src: "assets/photos/composite-03.webp", category: "composite", tag: "合成", caption: "阿狸合成" },
   { src: "assets/photos/composite-04.webp", category: "composite", tag: "合成", caption: "明日香合成" },
   { src: "assets/photos/composite-05.webp", category: "composite", tag: "合成", caption: "守岸人大合成" },
+  { src: "assets/photos/scene-12.webp", category: "scene", tag: "场照", caption: "场照样片 12" },
+  { src: "assets/photos/composite-06.webp", category: "composite", tag: "合成", caption: "飞鸟马时合成" },
+  { src: "assets/photos/composite-07.webp", category: "composite", tag: "合成", caption: "客单遐蝶合成" },
 ];
