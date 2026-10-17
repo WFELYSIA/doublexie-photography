@@ -1548,3 +1548,230 @@ body.site-ready .site-footer {
     width: 100%;
   }
 }
+
+.original-format {
+  margin: 0;
+  color: var(--accent-3);
+  font-size: 0.82rem;
+}
+
+.retouch-section {
+  margin-top: 28px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.retouch-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.retouch-heading h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.retouch-heading > p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.retouch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.retouch-card {
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.retouch-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.retouch-price {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.retouch-price strong {
+  font-size: 2.8rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.retouch-price span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.notes-categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+}
+
+.notes-category {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.notes-category-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.notes-category-head h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.notes-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notes-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.notes-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.notes-list > li > span {
+  padding-top: 2px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.notes-list strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.98rem;
+}
+
+.notes-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.schedule-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: 28px 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.schedule-date {
+  display: grid;
+  gap: 2px;
+  padding-right: 28px;
+  border-right: 1px solid var(--line);
+}
+
+.schedule-date span {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.schedule-date strong {
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.schedule-info h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+
+.schedule-info p {
+  margin: 0;
+  color: var(--accent-3);
+}
+
+.schedule-card .button {
+  min-width: 140px;
+}
+
+.splash-schedule {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.splash-schedule span {
+  margin-right: 8px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .retouch-grid,
+  .notes-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .schedule-date {
+    padding-right: 0;
+    padding-bottom: 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .schedule-card .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .retouch-heading {
+    display: grid;
+    align-items: start;
+  }
+
+  .notes-category {
+    padding: 22px 20px;
+  }
+}
