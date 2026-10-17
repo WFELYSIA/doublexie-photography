@@ -221,7 +221,30 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("is-scrolled", window.scrollY > 24);
 });
 
+function setupSegment(group) {
+  const tabs = document.querySelectorAll(`[data-${group}-tab]`);
+  const panels = document.querySelectorAll(`[data-${group}-panel]`);
+  if (!tabs.length || !panels.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const value = tab.dataset[`${group}Tab`];
+      tabs.forEach((item) => {
+        const active = item === tab;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-selected", String(active));
+      });
+      panels.forEach((panel) => {
+        const active = panel.dataset[`${group}Panel`] === value;
+        panel.hidden = !active;
+        panel.classList.toggle("is-active", active);
+      });
+    });
+  });
+}
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
+setupSegment("service");
+setupSegment("notes");
 setupSplash();
 buildGallery();
