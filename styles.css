@@ -371,7 +371,7 @@ button {
 .section {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 80px 0;
   scroll-margin-top: 84px;
 }
 
@@ -380,7 +380,7 @@ button {
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 42px;
+  margin-bottom: 32px;
 }
 
 .section-heading h2,
@@ -716,7 +716,7 @@ button {
 }
 
 .contact {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 
 .contact-panel {
@@ -1095,7 +1095,7 @@ button {
   }
 
   .section {
-    padding: 82px 0;
+    padding: 64px 0;
   }
 
 
@@ -1773,5 +1773,68 @@ body.site-ready .site-footer {
 
   .notes-category {
     padding: 22px 20px;
+  }
+}
+
+.pill-switch {
+  display: inline-flex;
+  gap: 4px;
+  margin: 0 0 26px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.pill-button {
+  min-height: 38px;
+  padding: 0 20px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.pill-button:hover {
+  color: var(--text);
+}
+
+.pill-button.is-active {
+  color: var(--bg);
+  background: var(--text);
+}
+
+.pill-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.segment-panel {
+  animation: rise-in 0.35s ease both;
+}
+
+.segment-panel[hidden] {
+  display: none;
+}
+
+.notes-panel {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+  .pill-switch {
+    display: flex;
+    width: 100%;
+  }
+
+  .pill-button {
+    flex: 1;
   }
 }
