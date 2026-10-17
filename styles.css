@@ -1,15 +1,15 @@
 :root {
-  --bg: #0c0c0f;
-  --bg-soft: #121216;
-  --surface: #18181d;
-  --surface-2: #202027;
-  --line: rgba(255, 255, 255, 0.1);
-  --text: #f4f0e8;
-  --muted: #aaa39a;
-  --accent: #ff8a3d;
-  --accent-2: #ff5d73;
-  --accent-3: #72c7ff;
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  --bg: #f6f7fb;
+  --bg-soft: #eef1f7;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-2: rgba(255, 255, 255, 0.92);
+  --line: rgba(43, 37, 51, 0.12);
+  --text: #241f2a;
+  --muted: #6f6879;
+  --accent: #e86f9b;
+  --accent-2: #c84f79;
+  --accent-3: #7c86b8;
+  --shadow: 0 24px 70px rgba(84, 62, 96, 0.12);
 }
 
 * {
@@ -25,6 +25,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family:
+    "Noto Sans SC",
     "PingFang SC",
     "Microsoft YaHei",
     "Noto Sans CJK SC",
@@ -1266,6 +1267,10 @@ body.splash-active {
     visibility 0.72s ease;
 }
 
+.splash.is-leaving {
+  opacity: 0;
+}
+
 .splash.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -1837,4 +1842,436 @@ body.site-ready .site-footer {
   .pill-button {
     flex: 1;
   }
+}
+
+/* Light editorial theme with restrained glass surfaces. */
+h1,
+h2,
+h3,
+.hero h1,
+.section-heading h2,
+.contact-copy h2,
+.retouch-heading h3,
+.notes-category-head h3,
+.schedule-info h3,
+.splash-panel h1 {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  font-weight: 600;
+}
+
+.site-header {
+  background: rgba(246, 247, 251, 0.8);
+  border-bottom-color: rgba(43, 37, 51, 0.08);
+}
+
+.site-header.is-scrolled {
+  background: rgba(246, 247, 251, 0.94);
+  border-bottom-color: var(--line);
+}
+
+.nav-cta,
+.button-primary,
+.splash-enter,
+.sticky-booking {
+  color: #fff;
+}
+
+.nav-cta:hover,
+.button-primary:hover {
+  background: #f08cb0;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(78, 61, 88, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 61, 88, 0.045) 1px, transparent 1px),
+    var(--bg);
+  background-size: 72px 72px;
+  border-bottom-color: var(--line);
+}
+
+.hero::before {
+  background: linear-gradient(90deg, transparent, rgba(232, 111, 155, 0.55), transparent);
+}
+
+.hero-watermark {
+  opacity: 0.075;
+}
+
+.hero h1 {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero-name {
+  color: var(--accent);
+}
+
+.hero-sub {
+  color: var(--muted);
+}
+
+.hero-foot span {
+  color: var(--muted);
+}
+
+.hero-foot-note {
+  color: var(--text) !important;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-kicker::before {
+  width: 7px;
+  height: 7px;
+  content: "";
+  border: 1px solid var(--accent);
+  transform: rotate(45deg);
+}
+
+.section-heading h2,
+.contact-copy h2,
+.retouch-heading h3,
+.notes-category-head h3,
+.schedule-info h3 {
+  color: var(--text);
+}
+
+.section-intro {
+  color: var(--muted);
+}
+
+.filter-bar,
+.pill-switch {
+  background: rgba(255, 255, 255, 0.62);
+  border-color: var(--line);
+  box-shadow: 0 12px 30px rgba(84, 62, 96, 0.07);
+  backdrop-filter: blur(14px);
+}
+
+.filter-button.is-active {
+  color: #fff;
+  background: var(--accent);
+}
+
+.gallery-item {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(84, 62, 96, 0.08);
+}
+
+.gallery-caption {
+  color: #fff;
+}
+
+.gallery-tag {
+  color: #fff;
+  background: var(--accent);
+}
+
+.price-card,
+.retouch-card,
+.notes-category,
+.schedule-card,
+.contact-panel,
+.contact-row {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: var(--line);
+  box-shadow: 0 18px 45px rgba(84, 62, 96, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.price-card-featured {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(232, 111, 155, 0.38);
+}
+
+.price-tag {
+  color: var(--accent-2);
+  background: rgba(232, 111, 155, 0.13);
+}
+
+.price-number strong,
+.retouch-price strong,
+.schedule-date strong {
+  color: var(--text);
+  font-family: "Inter", "Arial", sans-serif;
+}
+
+.price-number span,
+.price-package {
+  color: var(--muted);
+}
+
+.price-average {
+  color: var(--accent-2);
+  background: rgba(232, 111, 155, 0.13);
+}
+
+.price-average span {
+  color: var(--muted);
+}
+
+.price-list {
+  color: var(--muted);
+}
+
+.price-list li::before {
+  background: var(--accent);
+}
+
+.button-dark {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.54);
+  border-color: var(--line);
+}
+
+.button-dark:hover {
+  background: rgba(232, 111, 155, 0.1);
+  border-color: rgba(232, 111, 155, 0.3);
+}
+
+.promo-strip {
+  color: var(--muted);
+  background: rgba(232, 111, 155, 0.07);
+  border-color: rgba(232, 111, 155, 0.22);
+}
+
+.promo-strip strong,
+.promo-icon {
+  color: var(--accent-2);
+}
+
+.promo-icon {
+  background: rgba(232, 111, 155, 0.13);
+}
+
+.retouch-label,
+.notes-list p {
+  color: var(--muted);
+}
+
+.retouch-price span,
+.note-index,
+.notes-list > li > span {
+  color: var(--accent-2);
+}
+
+.notes-category-head,
+.notes-list li {
+  border-color: var(--line);
+}
+
+.notes-list strong {
+  color: var(--text);
+}
+
+.schedule-date {
+  border-color: var(--line);
+}
+
+.schedule-date span {
+  color: var(--accent-2);
+}
+
+.schedule-info p {
+  color: var(--accent-3);
+}
+
+.contact-copy p:not(.section-kicker) {
+  color: var(--muted);
+}
+
+.contact-label,
+.copy-hint,
+.location-hint {
+  color: var(--muted);
+}
+
+.copy-hint {
+  color: var(--accent-2);
+}
+
+.poster-link {
+  color: var(--accent-3);
+}
+
+.contact-row:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(232, 111, 155, 0.25);
+}
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pill-button.is-active {
+  color: #fff;
+  background: var(--accent);
+}
+
+.pill-button.is-active::before {
+  width: 5px;
+  height: 5px;
+  content: "";
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.site-footer {
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+.toast {
+  color: #fff;
+  background: var(--text);
+}
+
+.sticky-booking {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 16px 34px rgba(199, 79, 121, 0.26);
+  font-weight: 700;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease,
+    background 0.2s ease;
+}
+
+.sticky-booking.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.sticky-booking:hover {
+  background: #f08cb0;
+}
+
+.splash {
+  background: #f4e8ee;
+}
+
+.splash-media {
+  opacity: 0.28;
+  filter: grayscale(0.55) sepia(0.18) hue-rotate(300deg) saturate(1.35) brightness(1.02);
+}
+
+.splash-fade-top {
+  background: linear-gradient(to bottom, rgba(246, 247, 251, 0.98), rgba(246, 247, 251, 0));
+}
+
+.splash-fade-bottom {
+  background: linear-gradient(to top, rgba(246, 247, 251, 0.98), rgba(246, 247, 251, 0));
+}
+
+.splash-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 0;
+  box-shadow: 0 30px 90px rgba(84, 62, 96, 0.16);
+  backdrop-filter: blur(20px);
+}
+
+.splash-panel h1 {
+  color: var(--text);
+}
+
+.splash-sub,
+.splash-note {
+  color: var(--muted);
+}
+
+.splash-schedule {
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+.splash-schedule span {
+  color: var(--accent-2);
+}
+
+.splash-enter {
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 12px 28px rgba(199, 79, 121, 0.24);
+}
+
+.splash-enter:hover {
+  background: #f08cb0;
+}
+
+.splash-enter:focus-visible {
+  box-shadow: 0 0 0 3px rgba(232, 111, 155, 0.24), 0 12px 28px rgba(199, 79, 121, 0.3);
+}
+
+.splash-corner-logo {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .price-card,
+  .retouch-card,
+  .notes-category,
+  .schedule-card,
+  .contact-panel,
+  .contact-row,
+  .splash-panel {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+  }
+}
+
+@media (max-width: 560px) {
+  .sticky-booking {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    justify-content: center;
+  }
+}
+
+.button-ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.56);
+  border-color: var(--line);
+}
+
+.button-ghost:hover {
+  background: rgba(232, 111, 155, 0.09);
+  border-color: rgba(232, 111, 155, 0.32);
+}
+
+.splash-media {
+  opacity: 0.32;
+  filter: grayscale(0.55) sepia(0.18) hue-rotate(300deg) saturate(1.35) brightness(0.98);
+}
+
+.splash-corner-logo {
+  opacity: 1;
+  filter: saturate(1.05) contrast(1.02);
 }
