@@ -10,6 +10,7 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const photoCount = document.querySelector("[data-photo-count]");
+const stickyBooking = document.querySelector("[data-sticky-booking]");
 const splash = document.querySelector("[data-splash]");
 const splashMedia = document.querySelector("[data-splash-media]");
 const splashEnter = document.querySelector("[data-splash-enter]");
@@ -217,8 +218,15 @@ nav.querySelectorAll("a").forEach((link) => {
   });
 });
 
+function updateStickyBooking() {
+  if (!stickyBooking) return;
+  const visible = !document.body.classList.contains("splash-active") && window.scrollY > window.innerHeight * 0.72;
+  stickyBooking.classList.toggle("is-visible", visible);
+}
+
 window.addEventListener("scroll", () => {
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+  updateStickyBooking();
 });
 
 function setupSegment(group) {
