@@ -1829,8 +1829,8 @@ body.site-ready .site-footer {
 
 .notes-panel {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 @media (max-width: 560px) {
@@ -2292,4 +2292,9 @@ h3,
   .site-nav a:not(.nav-cta):hover {
     color: var(--accent-2);
   }
+}
+
+.splash-media {
+  opacity: 0.38;
+  filter: saturate(0.96) brightness(1.04);
 }
